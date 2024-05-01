@@ -1,1243 +1,1201 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <meta name="keywords" content="Document" />
-        <meta name="description" content="Your Description..." />
-        <title>Document</title>
-        <link
-            rel="stylesheet"
-            href="resources/swiper js/swiper-bundle.min.css"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-        />
-        <link rel="stylesheet" href="resources/css/loader.css" />
-        <link rel="stylesheet" href="resources/css/hamburger.css" />
-        <link rel="stylesheet" href="resources/css/home.css" />
-        <link rel="stylesheet" href="resources/css/about.css" />
-        <link rel="stylesheet" href="resources/css/services.css">
-        <link rel="stylesheet" href="resources/css/portfolio.css" />
-        <link rel="stylesheet" href="resources/css/blog.css" />
-        <link rel="stylesheet" href="resources/css/contact.css" />
-        <link href="resources/mapbox-gl/mapbox-gl.css" rel="stylesheet" />
-        <link rel="stylesheet" href="resources/css/style.css" />
-        <link
-            rel="shortcut icon"
-            href="resources/img/favicon.ico"
-            type="image/x-icon"
-        />
-    </head>
-    <body onload="loaded()">
-        <div class="loader">
-            <div class="c c1"></div>
-            <div class="c c2"></div>
-            <div class="c c3"></div>
-            <div class="c c4"></div>
-            <div class="c c5"></div>
-            <div class="c c6"></div>
-        </div>
-        <script>
-            let loader = document.querySelector(".loader");
-            function loaded() {
-                loader.classList.add("remove");
-                setTimeout(() => {
-                    loader.style.display = "none";
-                }, 1000);
-            }
-        </script>
-        <!-- HAMBURGER MENU BUTTON (responsively visible) -->
-        <div class="hamburger">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vCard - Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Richard hanrick">Richard hanrick</h1>
+
+          <p class="title">Web developer</p>
         </div>
 
-        <!-- THE REAL NAVIGATION -->
-        <nav class="navigation">
-            <h1>
-                Shuvro
-                <div></div>
-                <div></div>
-            </h1>
-            <ul>
-                <li><a href="#" onclick="home()">home</a></li>
-                <li>
-                    <a
-                        href="#"
-                        onclick="about(); animate3.play(); animate4.play();"
-                        >about</a
-                    >
-                </li>
-                <li><a href="#" onclick="services(); animate6.play();">services</a></li>
-                <li><a href="#" onclick="portfolio()">portfolio</a></li>
-                <li><a href="#" onclick="blog()">blog</a></li>
-                <li>
-                    <a href="#" onclick="contact(); animate5.play()">contact</a>
-                </li>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:richard@example.com" class="contact-link">richard@example.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">June 23, 1982</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Sacramento, California, USA</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon class = "socials-icons" name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon class = "socials-icons" name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon class = "socials-icons" name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
+            I enjoy
+            turning complex problems into simple, beautiful and intuitive designs.
+          </p>
+
+          <p>
+            My job is to build your website so that it is functional and user-friendly but at the same time attractive.
+            Moreover, I
+            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
+            across your
+            message and identity in the most creative way. I created web design for many famous brand companies.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web design</h4>
+
+                <p class="service-item-text">
+                  The most modern and high-quality design made at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                <p class="service-item-text">
+                  Professional development of applications for iOS and Android.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Photography</h4>
+
+                <p class="service-item-text">
+                  I make high-quality photos of any category at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Clients</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-1-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-2-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-3-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-4-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-5-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-6-color.png" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">University school of the arts</h4>
+
+              <span>2007 — 2008</span>
+
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">New york academy of art</h4>
+
+              <span>2006 — 2007</span>
+
+              <p class="timeline-text">
+                Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
+                omnis..
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">High school of art and design</h4>
+
+              <span>2002 — 2004</span>
+
+              <p class="timeline-text">
+                Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur
+                magni dolores
+                eos.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Creative director</h4>
+
+              <span>2015 — Present</span>
+
+              <p class="timeline-text">
+                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
+                molestias
+                exceptur.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Art director</h4>
+
+              <span>2013 — 2015</span>
+
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Web designer</h4>
+
+              <span>2010 — 2013</span>
+
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Web design</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Graphic design</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Branding</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">WordPress</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
             </ul>
-            <p>&copy; 2021 Shuvro.</p>
-        </nav>
 
-        <div class="container">
-            <div class="layer layer1 active">
-                <div class="home main">
-                    <div class="canvas_container">
-                        <canvas></canvas>
-                    </div>
-                    <div class="content-for-home">
-                        <div class="img-container"></div>
-                        <h1 align="center">Shirshen Das Gupta Shuvro</h1>
-                        <div class="social-icons">
-                            <div class="s-icon">
-                                <a href="#">
-                                    <i class="fab fa-facebook"></i>
-                                </a>
-                                <div class="s-name">Facebook</div>
-                            </div>
-                            <div class="s-icon">
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <div class="s-name">Tweeter</div>
-                            </div>
-                            <div class="s-icon">
-                                <a href="#">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <div class="s-name">GitHub</div>
-                            </div>
-                            <div class="s-icon">
-                                <a href="#">
-                                    <i class="fab fa-codepen"></i>
-                                </a>
-                                <div class="s-name">CodePen</div>
-                            </div>
-                            <div class="s-icon">
-                                <a href="#">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <div class="s-name">Instagram</div>
-                            </div>
-                            <div class="s-icon">
-                                <a href="#">
-                                    <i class="fas fa-envelope"></i>
-                                </a>
-                                <div class="s-name">Email</div>
-                            </div>
-                        </div>
+          </div>
 
-                        <div class="side-nav">
-                            <button
-                                onclick="about(); animate3.play(); animate4.play();"
-                            >
-                                <span class="w">W</span>
-                                <span class="tooltip"> why you? </span>
-                            </button>
-                            <button onclick="services(); animate6.play();">
-                                <span class="w">W</span>
-                                <span class="tooltip"> what do you do? </span>
-                            </button>
-                            <button onclick="portfolio()">
-                                <span class="w">W</span>
-                                <span class="tooltip">
-                                    what have you done?
-                                </span>
-                            </button>
-                            <button onclick="blog()">
-                                <span class="w">W</span>
-                                <span class="tooltip"> what others say? </span>
-                            </button>
-                            <button onclick="contact(); animate5.play()">
-                                <span class="w">W</span>
-                                <span class="tooltip"> where are you? </span>
-                            </button>
-                        </div>
+          <ul class="project-list">
 
-                        <div class="titles-for-side-nav">
-                            <span></span>
-                        </div>
-                    </div>
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Finance</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Orizon</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Fundo</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Brawlhalla</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DSM.</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MetaSpark</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Summary</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+
+                  <p class="blog-text">
+                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                  </p>
+
                 </div>
-            </div>
-            <div class="layer layer2">
-                <div class="about main">
-                    <!-- SEGMENT FOR STYLING. -->
-                    <div class="styling">
-                        <div class="absolute box"></div>
-                        <div class="absolute circle"></div>
-                        <div class="absolute triangle"></div>
-                        <div class="absolute dots">
-                            <div class="dot dot1"></div>
-                            <div class="dot dot2"></div>
-                            <div class="dot dot3"></div>
-                            <div class="dot dot4"></div>
-                            <div class="dot dot5"></div>
-                            <div class="dot dot6"></div>
-                            <div class="dot dot7"></div>
-                            <div class="dot dot8"></div>
-                            <div class="dot dot9"></div>
-                            <div class="dot dot10"></div>
-                            <div class="dot dot11"></div>
-                            <div class="dot dot12"></div>
-                            <div class="dot dot13"></div>
-                            <div class="dot dot14"></div>
-                            <div class="dot dot15"></div>
-                            <div class="dot dot16"></div>
-                            <div class="dot dot17"></div>
-                            <div class="dot dot18"></div>
-                            <div class="dot dot19"></div>
-                            <div class="dot dot20"></div>
-                            <div class="dot dot21"></div>
-                            <div class="dot dot22"></div>
-                            <div class="dot dot23"></div>
-                            <div class="dot dot24"></div>
-                        </div>
 
-                        <svg
-                            class="wave absolute"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 1450 320"
-                        >
-                            <path
-                                fill-opacity="1"
-                                d="M0,320L48,277.3C96,235,192,149,288,122.7C384,96,480,128,576,165.3C672,203,768,245,864,234.7C960,224,1056,160,1152,112C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-                            ></path>
-                        </svg>
+              </a>
+            </li>
 
-                        <svg
-                            class="wave absolute opposite"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 1450 320"
-                        >
-                            <path
-                                fill-opacity="1"
-                                d="M0,224L48,213.3C96,203,192,181,288,192C384,203,480,245,576,218.7C672,192,768,96,864,64C960,32,1056,64,1152,101.3C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-                            ></path>
-                        </svg>
-                    </div>
+            <li class="blog-post-item">
+              <a href="#">
 
-                    <!-- REAL CONTENT -->
-                    <div class="wrapper">
-                        <div class="face face1">
-                            <div class="content">
-                                <p>Hello,</p>
-                                <h1>I'm Shuvro</h1>
-                                <p class="text">
-                                    I am a Web Developer, and I'm very
-                                    passionate and dedicated to my work With 10
-                                    years experience as a professional Web
-                                    Developer, I have acquired the skills and
-                                    knowledge necessary to make your project a
-                                    success I enjoy every step of the design
-                                    process, from discussion and collaboration.
-                                </p>
-                                <a
-                                    class="button download"
-                                    href="resources/img/bg1.png"
-                                    download="shuvro_cv"
-                                    >Download CV</a
-                                >
-                                <a
-                                    class="button hire"
-                                    href="#"
-                                    class="hire"
-                                    onclick="contact(); animate5.play()"
-                                    >Hire Me.</a
-                                >
-                            </div>
-                        </div>
-                        <div class="face face2"></div>
-                    </div>
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                </figure>
 
-                    <!-- THE NAVIGATION OF ABOUT -->
-                    <nav class="about_nav">
-                        <ul>
-                            <li>
-                                <a class="active" href="#" data-text="one"
-                                    >Skills</a
-                                >
-                            </li>
-                            <li>
-                                <a href="#" data-text="two">Experience</a>
-                            </li>
-                            <li>
-                                <a href="#" data-text="three">Education</a>
-                            </li>
-                        </ul>
-                    </nav>
+                <div class="blog-content">
 
-                    <div class="about_container">
-                        <!-- SKILL BOX -->
-                        <div class="skills">
-                            <div class="skill">
-                                <div class="name">HTML5</div>
-                                <div class="value" style="left: 90%">90%</div>
-                                <div class="percent">
-                                    <div
-                                        class="progress"
-                                        style="width: 90%"
-                                    ></div>
-                                </div>
-                            </div>
-                            <div class="skill">
-                                <div class="name">CSS3</div>
-                                <div class="value" style="left: 75%">75%</div>
-                                <div class="percent">
-                                    <div
-                                        class="progress"
-                                        style="width: 75%"
-                                    ></div>
-                                </div>
-                            </div>
-                            <div class="skill">
-                                <div class="name">JavaScript</div>
-                                <div class="value" style="left: 65%">65%</div>
-                                <div class="percent">
-                                    <div
-                                        class="progress"
-                                        style="width: 65%"
-                                    ></div>
-                                </div>
-                            </div>
-                            <div class="skill">
-                                <div class="name">PHP</div>
-                                <div class="value" style="left: 50%">50%</div>
-                                <div class="percent">
-                                    <div
-                                        class="progress"
-                                        style="width: 50%"
-                                    ></div>
-                                </div>
-                            </div>
-                            <div class="skill">
-                                <div class="name">Jquery</div>
-                                <div class="value" style="left: 45%">45%</div>
-                                <div class="percent">
-                                    <div
-                                        class="progress"
-                                        style="width: 45%"
-                                    ></div>
-                                </div>
-                            </div>
-                            <div class="skill">
-                                <div class="name">C++</div>
-                                <div class="value" style="left: 55%">55%</div>
-                                <div class="percent">
-                                    <div
-                                        class="progress"
-                                        style="width: 55%"
-                                    ></div>
-                                </div>
-                            </div>
-                        </div>
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
 
-                        <!-- EXPERIENCE -->
-                        <div class="experience">
-                            <div class="middle_line"></div>
-                            <div class="cover">
-                                <i class="job_box fas fa-briefcase"></i>
-                                <i class="date">Sep 2020 - Present</i>
-                                <h2>Full Stack Developer</h2>
-                                <i class="name_company">Company Name</i>
-                                <article class="text_hidden">
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Ut sint magnam ipsam
-                                    eveniet omnis nemkjdkjo commodi dolorum neque
-                                    fugiat, soluta tempora vitae error magni.
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Quaerat est amet
-                                    voluptatibus, nam perferendis provident
-                                    veritatis cum, dolorum eaque voluptates
-                                    asperiores, nostrum voluptatum. Autem
-                                    incidunt praesentium tempora, minus suscipit
-                                    fugiat?
-                                </article>
-                            </div>
-                            <div class="whitespace"></div>
-                            <div class="whitespace"></div>
-                            <div class="cover">
-                                <i class="job_box fas fa-briefcase"></i>
-                                <i class="date">Apr 2020 - Jan 2019</i>
-                                <h2>Full Stack Developer</h2>
-                                <i class="name_company">Company Name</i>
-                                <article class="text_hidden">
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Ut sint magnam ipsam
-                                    eveniet omnis nemo commodi dolorum neque
-                                    fugiat, soluta tempora vitae error magni.
-                                </article>
-                            </div>
-                            <div class="cover">
-                                <i class="job_box fas fa-briefcase"></i>
-                                <i class="date">Feb 2018 - Apr 2020</i>
-                                <h2>Full Stack Developer</h2>
-                                <i class="name_company">Company Name</i>
-                                <article class="text_hidden">
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Ut sint magnam ipsam
-                                    eveniet omnis nemo commodi dolorum neque
-                                    fugiat, soluta tempora vitae error magni.
-                                </article>
-                            </div>
-                            <div class="whitespace"></div>
-                            <div class="whitespace"></div>
-                            <div class="cover">
-                                <i class="job_box fas fa-briefcase"></i>
-                                <i class="date">Aug 2014 - Feb 2018</i>
-                                <h2>Full Stack Developer</h2>
-                                <i class="name_company">Company Name</i>
-                                <article class="text_hidden">
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Ut sint magnam ipsam
-                                    eveniet omnis nemo commodi dolorum neque
-                                    fugiat, soluta tempora vitae error magni.
-                                </article>
-                            </div>
-                        </div>
-                        <div class="education">
-                            <div class="middle_line"></div>
-                            <div class="cover">
-                                <i class="job_box fas fa-book-reader"></i>
-                                <i class="date">2019 - 2019</i>
-                                <h2>Completed Graphics Designing</h2>
-                                <i class="name_company">Google LLC.</i>
-                                <article class="text_hidden">
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Ut sint magnam ipsam
-                                    eveniet omnis nemo commodi dolorum neque
-                                    fugiat, soluta tempora vitae error magni.
-                                </article>
-                            </div>
-                            <div class="whitespace"></div>
-                            <div class="whitespace"></div>
-                            <div class="cover">
-                                <i class="job_box fas fa-book-reader"></i>
-                                <i class="date">2018 - 2019</i>
-                                <h2>Completed Web Designing Course</h2>
-                                <i class="name_company">Wixframe Inc.</i>
-                                <article class="text_hidden">
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Ut sint magnam ipsam
-                                    eveniet omnis nemo commodi dolorum neque
-                                    fugiat, soluta tempora vitae error magni.
-                                </article>
-                            </div>
-                            <div class="cover">
-                                <i class="job_box fas fa-book-open"></i>
-                                <i class="date">2016 - 2018</i>
-                                <h2>Masters In Science</h2>
-                                <i class="name_company">BUET, Bangladesh</i>
-                                <article class="text_hidden">
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Ut sint magnam ipsam
-                                    eveniet omnis nemo commodi dolorum neque
-                                    fugiat, soluta tempora vitae error magni.
-                                </article>
-                            </div>
-                            <div class="whitespace"></div>
-                            <div class="whitespace"></div>
-                            <div class="cover">
-                                <i class="job_box fas fa-book-open"></i>
-                                <i class="date">2012 - 2016</i>
-                                <h2>Bachelor In Science</h2>
-                                <i class="name_company">BUET, Bangladesh.</i>
-                                <article class="text_hidden">
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Ut sint magnam ipsam
-                                    eveniet omnis nemo commodi dolorum neque
-                                    fugiat, soluta tempora vitae error magni.
-                                </article>
-                            </div>
-                        </div>
-                    </div>
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+
+                  <p class="blog-text">
+                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+                  </p>
+
                 </div>
-            </div>
-            <div class="layer layer3">
-                <div class="services main">
-                    <!-- <section class="background">
-                        <div class="bg_wrapper"></div>
-                    </section> -->
-                    <div class="hero">
-                        <span class="typography">
-                            <span class="t_dummy">We know how to</span> <br />
-                            <span class="t-box">
-                                <span class="box-side box-front"
-                                    >take risk</span
-                                >
-                                <span class="box-side box-top"
-                                    >take a side</span
-                                >
-                                <span class="box-side box-back"
-                                    >be different</span
-                                >
-                                <span class="box-side box-bottom"
-                                    >be innovative</span
-                                >
-                            </span>
-                        </span>
-                        <p class="hero-text">
-                            Shuvro is an excellent web designer and faultless
-                            technician. He’s a pleasure to work with, great
-                            value for money and will always go the extra mile
-                            when necessary.
-                        </p>
-                    </div>
-                    <div class="capabilities left move-little-down">
-                        <img src="resources/img/elements/web_bg.png" alt="" />
-                        <p class="c_content">
-                            <span class="c_title">Web</span>
-                            His creative journey started with Web Design. To
-                            code his own designs, he learned how to code and has
-                            since then worked hard to stay relevant in both
-                            fields. For smooth collaboration with clients he is
-                            now-a-days using programing languages for designing
-                            and prototyping.
-                            <br />
-                            <a href="#">Learn More</a>
-                            <i class="far fa-arrow-alt-circle-right"></i>
-                        </p>
-                    </div>
-                    <div class="capabilities right">
-                        <p class="c_content">
-                            <span class="c_title">Graphics</span>
-                            With a designers eye for details, Shuvro is
-                            passionate about implementing designed into highly
-                            interactive experience by paying close attention to
-                            details, animations and performances.
-                            <br />
-                            <a href="#">Learn More</a>
-                            <i class="far fa-arrow-alt-circle-right"></i>
-                        </p>
-                        <img
-                            src="resources/img/elements/graphics_bg.png"
-                            alt=""
-                        />
-                    </div>
-                    <div class="capabilities left">
-                        <img
-                            src="resources/img/elements/seo_bg.png"
-                            alt=""
-                            style="
-                                background: #2929292f;
-                                backdrop-filter: blur(4px);
-                                border-radius: 40px;
-                            "
-                        />
-                        <p class="c_content">
-                            <span class="c_title">SEO</span>
-                            With 1+ years of experience in the Digital industry,
-                            he proved that the combination of strategic thinking
-                            and expertise will create a fascinating digital
-                            experience.
-                            <br />
-                            <a href="#">Learn More</a>
-                            <i class="far fa-arrow-alt-circle-right"></i>
-                        </p>
-                    </div>
-                    <div class="foot">
-                        <h2>Works:</h2>
-                        <div class="foot-link">
-                            <a href="#" onclick="portfolio()">Profile World</a>
-                            <i class="far fa-arrow-alt-circle-right"></i>
-                            <img
-                                src="resources/img/portfolios/app/2.jpg"
-                                alt="portfolio"
-                            />
-                        </div>
-                        <div class="foot-link">
-                            <a href="#" onclick="portfolio()">Art Director</a>
-                            <i class="far fa-arrow-alt-circle-right"></i>
-                            <img
-                                src="resources/img/portfolios/card/2.jpg"
-                                alt="portfolio"
-                            />
-                        </div>
-                        <div class="foot-link">
-                            <a href="#" onclick="portfolio()">Lora Website</a>
-                            <i class="far fa-arrow-alt-circle-right"></i>
-                            <img
-                                src="resources/img/portfolios/web/1.jpg"
-                                alt="portfolio"
-                            />
-                        </div>
-                    </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #80</h3>
+
+                  <p class="blog-text">
+                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
+                  </p>
+
                 </div>
-            </div>
-            <div class="layer layer4">
-                <div class="portfolio main">
-                    <div class="tip main">
-                        <div class="allContent">
-                            <div class="description" style="display: none">
-                                <div class="pro_intro">
-                                    <div class="nameplate">
-                                        <h1>Wedding Couple</h1>
-                                        <span
-                                            >Category:
-                                            <span style="color: #999"
-                                                >Web Design</span
-                                            ></span
-                                        >
-                                    </div>
-                                    <div class="other_text">
-                                        <h2>Project Brief:</h2>
-                                        <p
-                                            class="pro_brief"
-                                            style="
-                                                color: #999;
-                                                padding-left: 15px;
-                                            "
-                                        >
-                                            Lorem ipsum, dolor sit amet
-                                            consectetur adipisicing elit. At
-                                            corrupti modi perferendis iure
-                                            corporis dolores minus asperiores
-                                            nemo debitis veritatis id placeat,
-                                            similique eum recusandae ipsa quia
-                                            cum earum nam?
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="pro_info">
-                                    <h2>Project Info</h2>
-                                    <p class="Date">
-                                        <b>Date: </b>
-                                        <span style="color: #999">2020</span>
-                                    </p>
-                                    <p class="client">
-                                        <b>Client: </b>
-                                        <span style="color: #999">xyz</span>
-                                    </p>
-                                    <p>
-                                        <b>Tools: </b>
-                                        <span style="color: #999"
-                                            >HTML, CSS, JavaScript</span
-                                        >
-                                    </p>
-                                    <p class="link">
-                                        <b>Web: </b>
-                                        <span style="color: #999"
-                                            ><a href="#"
-                                                >www.domain.com</a
-                                            ></span
-                                        >
-                                    </p>
-                                </div>
-                            </div>
 
-                            <button class="closeButton">
-                                <span>Project Details</span>
-                                <div class="icon"></div>
-                            </button>
-                            <button class="exitButton">&times;</button>
+              </a>
+            </li>
 
-                            <div class="port_content">
-                                <div class="swiper-container-2">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <img src="#" alt="web design" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="#" alt="web design" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="#" alt="web design" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="#" alt="web design" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="#" alt="web design" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="#" alt="web design" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="#" alt="web design" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="#" alt="web design" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="#" alt="web design" />
-                                        </div>
-                                    </div>
-                                    <!-- Add Pagination -->
-                                    <div class="swiper-scrollbar"></div>
-                                    <!-- Add Arrows -->
-                                    <div class="swiper-button-next"></div>
-                                    <div class="swiper-button-prev"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <nav class="about_nav padding_top">
-                        <ul>
-                            <li>
-                                <a
-                                    class="filter active"
-                                    href="#"
-                                    data-filter="all"
-                                    >All</a
-                                >
-                            </li>
-                            <li>
-                                <a class="filter" href="#" data-filter=".web"
-                                    >Web Design</a
-                                >
-                            </li>
-                            <li>
-                                <a class="filter" href="#" data-filter=".logo"
-                                    >Logo</a
-                                >
-                            </li>
-                            <li>
-                                <a class="filter" href="#" data-filter=".card"
-                                    >Cards</a
-                                >
-                            </li>
-                            <li>
-                                <a class="filter" href="#" data-filter=".app"
-                                    >Apps</a
-                                >
-                            </li>
-                            <li>
-                                <a class="filter" href="#" data-filter=".icon"
-                                    >Icons</a
-                                >
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="mymixcont">
-                        <div class="mix web">
-                            <img
-                                src="resources/img/portfolios/web/1.jpg"
-                                alt=""
-                            />
-                            <span class="title">Lora Website</span>
-                            <span class="port_link">View Project</span>
-                        </div>
-                        <div class="mix icon">
-                            <img
-                                src="resources/img/portfolios/icon/5.jpg"
-                                alt=""
-                            />
-                            <span class="title">Water World</span>
-                            <span class="port_link">View Project</span>
-                        </div>
-                        <div class="mix card">
-                            <img
-                                src="resources/img/portfolios/card/1.jpg"
-                                alt=""
-                            />
-                            <span class="title">Brand Photography</span>
-                            <span class="port_link">View Project</span>
-                        </div>
-                        <div class="mix web">
-                            <img
-                                src="resources/img/portfolios/web/2.jpg"
-                                alt=""
-                            />
-                            <span class="title">Student Guide</span>
-                            <span class="port_link">View Project</span>
-                        </div>
-                        <div class="mix app">
-                            <img
-                                src="resources/img/portfolios/app/1.jpg"
-                                alt=""
-                            />
-                            <span class="title">World View</span>
-                            <span class="port_link">View Project</span>
-                        </div>
-                        <div class="mix card">
-                            <img
-                                src="resources/img/portfolios/card/2.jpg"
-                                alt=""
-                            />
-                            <span class="title">Art Director</span>
-                            <span class="port_link">View Project</span>
-                        </div>
-                        <div class="mix web">
-                            <img
-                                src="resources/img/portfolios/web/3.jpg"
-                                alt=""
-                            />
-                            <span class="title">Web App Pro</span>
-                            <span class="port_link">View Project</span>
-                        </div>
-                        <div class="mix card">
-                            <img
-                                src="resources/img/portfolios/card/3.jpg"
-                                alt=""
-                            />
-                            <span class="title">Reauty</span>
-                            <span class="port_link">View Project</span>
-                        </div>
-                        <div class="mix web">
-                            <img
-                                src="resources/img/portfolios/web/4.jpg"
-                                alt=""
-                            />
-                            <span class="title">Sonor Design</span>
-                            <span class="port_link">View Project</span>
-                        </div>
-                        <div class="mix card">
-                            <img
-                                src="resources/img/portfolios/card/4.jpg"
-                                alt=""
-                            />
-                            <span class="title">Richard Tan</span>
-                            <span class="port_link">View Project</span>
-                        </div>
-                        <div class="mix logo">
-                            <img
-                                src="resources/img/portfolios/logo/1.jpg"
-                                alt=""
-                            />
-                            <span class="title">Kitty Pic</span>
-                            <span class="port_link">View Project</span>
-                        </div>
-                        <div class="mix icon">
-                            <img
-                                src="resources/img/portfolios/icon/4.jpg"
-                                alt=""
-                            />
-                            <span class="title">Domine</span>
-                            <span class="port_link">View Project</span>
-                        </div>
-                        <div class="mix app">
-                            <img
-                                src="resources/img/portfolios/app/2.jpg"
-                                alt=""
-                            />
-                            <span class="title">Profile World</span>
-                            <span class="port_link">View Project</span>
-                        </div>
-                        <div class="mix logo">
-                            <img
-                                src="resources/img/portfolios/logo/2.jpg"
-                                alt=""
-                            />
-                            <span class="title">Specialisterne</span>
-                            <span class="port_link">View Project</span>
-                        </div>
-                        <div class="mix logo">
-                            <img
-                                src="resources/img/portfolios/logo/3.jpg"
-                                alt=""
-                            />
-                            <span class="title">Native Design</span>
-                            <span class="port_link">View Project</span>
-                        </div>
-                        <div class="mix card">
-                            <img
-                                src="resources/img/portfolios/card/5.jpg"
-                                alt=""
-                            />
-                            <span class="title">Sriram Mohan</span>
-                            <span class="port_link">View Project</span>
-                        </div>
-                        <div class="mix logo">
-                            <img
-                                src="resources/img/portfolios/logo/4.jpg"
-                                alt=""
-                            />
-                            <span class="title">Book Worm</span>
-                            <span class="port_link">View Project</span>
-                        </div>
-                        <div class="mix icon">
-                            <img
-                                src="resources/img/portfolios/icon/2.jpg"
-                                alt=""
-                            />
-                            <span class="title">Football FC</span>
-                            <span class="port_link">View Project</span>
-                        </div>
-                        <div class="mix logo">
-                            <img
-                                src="resources/img/portfolios/logo/5.jpg"
-                                alt=""
-                            />
-                            <span class="title">Free Notes</span>
-                            <span class="port_link">View Project</span>
-                        </div>
-                        <div class="mix icon">
-                            <img
-                                src="resources/img/portfolios/icon/1.jpg"
-                                alt=""
-                            />
-                            <span class="title">Insta Genre</span>
-                            <span class="port_link">View Project</span>
-                        </div>
-                        <div class="mix logo">
-                            <img
-                                src="resources/img/portfolios/logo/6.jpg"
-                                alt=""
-                            />
-                            <span class="title">Movie Sock</span>
-                            <span class="port_link">View Project</span>
-                        </div>
-                        <div class="mix logo">
-                            <img
-                                src="resources/img/portfolios/logo/7.jpg"
-                                alt=""
-                            />
-                            <span class="title">Village Community Church</span>
-                            <span class="port_link">View Project</span>
-                        </div>
-                        <div class="mix app">
-                            <img
-                                src="resources/img/portfolios/app/3.jpg"
-                                alt=""
-                            />
-                            <span class="title">Weathery</span>
-                            <span class="port_link">View Project</span>
-                        </div>
-                        <div class="mix icon">
-                            <img
-                                src="resources/img/portfolios/icon/3.jpg"
-                                alt=""
-                            />
-                            <span class="title">Fav Shop</span>
-                            <span class="port_link">View Project</span>
-                        </div>
-                    </div>
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
+
+                  <p class="blog-text">
+                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
+                  </p>
+
                 </div>
-            </div>
-            <div class="layer layer5">
-                <div class="testimonial">
-                    <h1>
-                        <span>See What My Clients Say about Me.</span>
-                    </h1>
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="resources/img/favicon.ico" alt="" />
-                                <h4>Erik Lasher</h4>
-                                <div class="rating">
-                                    <label>&starf;</label>
-                                    <label>&starf;</label>
-                                    <label>&starf;</label>
-                                    <label>&starf;</label>
-                                    <label>&starf;</label>
-                                </div>
-                                <p>
-                                    <span>&ldquo;</span>
-                                    Shuvro is an excellent web designer and
-                                    faultless technician. He’s a pleasure to
-                                    work with, great value for money and will
-                                    always go the extra mile when necessary.
-                                </p>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="resources/img/favicon.ico" alt="" />
-                                <h4>Erik Lasher</h4>
-                                <div class="rating">
-                                    <label>&starf;</label>
-                                    <label>&starf;</label>
-                                    <label>&starf;</label>
-                                    <label>&starf;</label>
-                                    <label>&starf;</label>
-                                </div>
-                                <p>
-                                    <span>&ldquo;</span>
-                                    Shuvro is an excellent web designer and
-                                    faultless technician. He’s a pleasure to
-                                    work with, great value for money and will
-                                    always go the extra mile when necessary.
-                                </p>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="resources/img/favicon.ico" alt="" />
-                                <h4>Erik Lasher</h4>
-                                <div class="rating">
-                                    <label>&starf;</label>
-                                    <label>&starf;</label>
-                                    <label>&starf;</label>
-                                    <label>&starf;</label>
-                                    <label>&starf;</label>
-                                </div>
-                                <p>
-                                    <span>&ldquo;</span>
-                                    Shuvro is an excellent web designer and
-                                    faultless technician. He’s a pleasure to
-                                    work with, great value for money and will
-                                    always go the extra mile when necessary.
-                                </p>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="resources/img/favicon.ico" alt="" />
-                                <h4>Erik Lasher</h4>
-                                <div class="rating">
-                                    <label>&starf;</label>
-                                    <label>&starf;</label>
-                                    <label>&starf;</label>
-                                    <label>&starf;</label>
-                                    <label>&starf;</label>
-                                </div>
-                                <p>
-                                    <span>&ldquo;</span>
-                                    Shuvro is an excellent web designer and
-                                    faultless technician. He’s a pleasure to
-                                    work with, great value for money and will
-                                    always go the extra mile when necessary.
-                                </p>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="resources/img/favicon.ico" alt="" />
-                                <h4>Erik Lasher</h4>
-                                <div class="rating">
-                                    <label>&starf;</label>
-                                    <label>&starf;</label>
-                                    <label>&starf;</label>
-                                    <label>&starf;</label>
-                                    <label>&starf;</label>
-                                </div>
-                                <p>
-                                    <span>&ldquo;</span>
-                                    Shuvro is an excellent web designer and
-                                    faultless technician. He’s a pleasure to
-                                    work with, great value for money and will
-                                    always go the extra mile when necessary.
-                                </p>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="resources/img/favicon.ico" alt="" />
-                                <h4>Erik Lasher</h4>
-                                <div class="rating">
-                                    <label>&starf;</label>
-                                    <label>&starf;</label>
-                                    <label>&starf;</label>
-                                    <label>&starf;</label>
-                                    <label>&starf;</label>
-                                </div>
-                                <p>
-                                    <span>&ldquo;</span>
-                                    Shuvro is an excellent web designer and
-                                    faultless technician. He’s a pleasure to
-                                    work with, great value for money and will
-                                    always go the extra mile when necessary.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- Add Pagination -->
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
+
+                  <p class="blog-text">
+                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+
                 </div>
-            </div>
-            <div class="layer layer6">
-                <div class="contact_us">
-                    <div id="map"></div>
-                    <address class="info_container">
-                        <div class="info info1">
-                            <i class="fas fa-phone-alt"></i>
-                            <span class="iname">Phone</span>
-                            <a href="tel:+8800000000000">+8800000000000</a>
-                            <a href="tel:+8811111111111">+8811111111111</a>
-                        </div>
-                        <div class="info info2">
-                            <i class="fas fa-home"></i>
-                            <span class="iname">Address</span>
-                            <a
-                                href="https://www.google.com/maps/place/Sherpur+Town+Hall/@25.0136644,90.0140045,355m/data=!3m1!1e3!4m5!3m4!1s0x3757d6136d793499:0x8c22620664dc6a37!8m2!3d25.0156371!4d90.0168872"
-                            >
-                                <h3>Govt. Girls' School Road</h3>
-                                <span>Kharampur, Sherpur</span><br />
-                                <span>Bangladesh</span>
-                            </a>
-                        </div>
-                        <div class="info info3">
-                            <i class="fas fa-envelope"></i>
-                            <span class="iname">Email</span>
-                            <a href="mailto:email1.gmail.com"
-                                >shuvro1@gmail.com</a
-                            >
-                            <a href="mailto:email2.gmail.com"
-                                >shuvro2@gmail.com</a
-                            >
-                        </div>
-                    </address>
 
-                    <form action="#" method="post">
-                        <h1>Get In Touch</h1>
-                        <div class="inp_field">
-                            <i class="fas fa-user"></i>
-                            <input
-                                type="text"
-                                name="name"
-                                class="fname"
-                                id="fname"
-                                placeholder="Full Name"
-                                required
-                            />
-                        </div>
-                        <div class="inp_field">
-                            <i class="fas fa-envelope"></i>
-                            <input
-                                type="email"
-                                name="email"
-                                class="email"
-                                id="email"
-                                placeholder="Email"
-                                required
-                            />
-                        </div>
-                        <div class="inp_field">
-                            <i class="fas fa-angle-double-right"></i>
-                            <input
-                                type="text"
-                                name="subject"
-                                class="subject"
-                                id="subject"
-                                placeholder="Subject"
-                                required
-                            />
-                        </div>
-                        <textarea
-                            name="message"
-                            cols="30"
-                            rows="5"
-                            class="message"
-                            id="message"
-                            placeholder="Message"
-                            required
-                        ></textarea>
-                        <button class="submit" id="submit">Submit</button>
-                    </form>
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #79</h3>
+
+                  <p class="blog-text">
+                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+                  </p>
+
                 </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
             </div>
-        </div>
 
-        <!-----------------JQUERY {https://jquery.com/} [USED IN portfolio.js]----------------->
-        <script src="resources/js/jquery.min.js"></script>
-        <!-----------------MIX IT UP {https://www.kunkalabs.com/mixitup/} [USED IN portfolio.js]----------------->
-        <script src="resources/js/mixitup.min.js"></script>
-        <!-----------------SWIPER JS {https://swiperjs.com/} [USED IN portfolio.js, blog.js]----------------->
-        <script src="resources/swiper js/swiper-bundle.min.js"></script>
-        <!-----------------MAPBOX GL {https://www.mapbox.com/} [USED IN contact.js]----------------->
-        <script src="resources/mapbox-gl/mapbox-gl.js"></script>
-        <!-----------------EMAIL JS {https://www.emailjs.com/} [USED IN contact.js]----------------->
-        <script src="resources/js/email.min.js"></script>
-        <!-----------------ADDITIONAL SCRIPT FOR EMAIL JS----------------->
-        <script type="text/javascript">
-            (function () {
-                emailjs.init("user_5OMETIDQ2Nm9qBMtaFNz4");
-            })();
-        </script>
-        <!-----------------VANILLA TILT JS {https://micku7zu.github.io/vanilla-tilt.js/}----------------->
-        <script src="resources/js/vanilla-tilt.min.js"></script>
-        <!-----------------ANIME JS {https://animejs.com/} [USED LOCALLY.]----------------->
-        <script src="resources/js/anime.min.js"></script>
-        <!-----------------LOCAL (HOME)----------------->
-        <script src="resources/js/home.js"></script>
-        <!-----------------LOCAL (ABOUT)----------------->
-        <script src="resources/js/about.js"></script>
-        <!-----------------LOCAL (SERVICES)----------------->
-        <script src="resources/js/services.js"></script>
-        <!-----------------LOCAL (PORTFOLIO)----------------->
-        <script src="resources/js/portfolio.js"></script>
-        <!-----------------LOCAL (BLOG)----------------->
-        <script src="resources/js/blog.js"></script>
-        <!-----------------LOCAL (CONTACT)----------------->
-        <script src="resources/js/contact.js"></script>
-        <!-----------------LOCAL (MAIN FILE)----------------->
-        <script src="resources/js/main.js"></script>
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
-        <!-----------------LOCAL (MAIN FILE { USED TO ANIMATE WEBPAGE.})----------------->
-        <script>
-            const animate1 = anime.timeline({
-                targets: ".circle",
-                loop: true,
-                duration: 2000,
-                direction: "alternate",
-                easing: "easeInOutQuad",
-            });
-            animate1.add({
-                translateX: 350,
-            });
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
 
-            let dot = document.querySelectorAll(".dot");
-            for (let i = 0; i < dot.length; i++) {
-                const ind = dot[i];
-                const animate2 = anime.timeline({
-                    targets: ind,
-                    loop: true,
-                    direction: "alternate",
-                    delay: i * 100,
-                });
-                animate2.add({
-                    scale: 2,
-                });
-            }
+          </form>
 
-            let span = document.querySelectorAll(".content .text span");
-            const animate3 = anime.timeline({
-                targets: span,
-                easing: "easeInOutExpo",
-                delay: anime.stagger(20, { direction: "reverse" }),
-                direction: "reverse",
-                autoplay: false,
-            });
+        </section>
 
-            animate3.add({
-                rotate: () => {
-                    return anime.random(-360, 360);
-                },
-                translateX: () => {
-                    return anime.random(-500, 500);
-                },
-                translateY: () => {
-                    return anime.random(-500, 500);
-                },
-                duration: 3000,
-            });
+      </article>
 
-            const animate4 = anime({
-                targets: ".button",
-                scale: [0, 1],
-                delay: anime.stagger(200, { start: 7000 }),
-                autoplay: false,
-            });
+    </div>
 
-            const animate5 = anime({
-                targets: [
-                    document.querySelectorAll(".info"),
-                    document.querySelectorAll(".inp_field"),
-                    ".message",
-                    ".submit",
-                ],
-                translateY: [50, 0],
-                rotateX: [90, 0],
-                opacity: [0, 1],
-                delay: anime.stagger(300, { start: 1000 }),
-                duration: 750,
-                autoplay: false,
-                easing: "easeOutQuint",
-            });
-            
-            const animate6 = anime({
-                targets: ['.services .t_dummy', '.services .hero-text'],
-                duration: 1000,
-                scaleX: [0, 1],
-                delay: anime.stagger(300, {start: 1000}),
-                autoplay: false,
-            });
+  </main>
 
-            function resize() {
-                if (window.innerWidth <= 632) {
-                    animate5.play();
-                    animate3.play();
-                    animate4.play();
-                    animate6.play();
-                }
-            }
-            resize();
-            window.addEventListener("resize", resize);
-        </script>
-    </body>
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
 </html>
